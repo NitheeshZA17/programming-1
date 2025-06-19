@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int number;
+
+    // Get input from the user
+    scanf("%d", &number);
+
+    // Check if the number is divisible by 2
+    if (number % 2 == 0) {
+        printf("The given input %d is Even\n", number);
+    } else {
+        printf("The given input %d is Odd\n", number);
+    }
+
+    return 0;
+}
