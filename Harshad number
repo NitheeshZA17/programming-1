@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int num, originalNum, sumOfDigits = 0;
+
+    // Get input from the user
+    scanf("%d", &num);
+
+    originalNum = num; // Store the original number to use for the divisibility check
+
+    // Calculate the sum of digits
+    while (num > 0) {
+        sumOfDigits += num % 10; // Add the last digit to sumOfDigits
+        num /= 10;             // Remove the last digit
+    }
+
+    // Check if the original number is divisible by the sum of its digits
+    if (originalNum % sumOfDigits == 0) {
+        printf("Harshad Number\n");
+    } else {
+        printf("Not Harshad Number\n");
+    }
+
+    return 0;
+}
